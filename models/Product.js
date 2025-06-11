@@ -38,12 +38,10 @@ const productSchema = new mongoose.Schema({
   },
   subcategory: {
     type: String,
-    required: true,
     trim: true, // ensure no trailing/leading whitespace
     lowercase: true, // normalize case for easier filtering
   },
   price: { type: Number, required: true },
-  costPrice: { type: Number, default: 0 },
   unit: { type: String, required: true },
 
   // NEW: Default quantity for product cards display
